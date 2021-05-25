@@ -1,0 +1,19 @@
+@import-normalize;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background: linear-gradient(to bottom, #DAD299, #B0DAB9);
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
