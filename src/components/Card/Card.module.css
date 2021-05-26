@@ -1,14 +1,24 @@
 .game__card {
   padding: 10px;
 
-  border: 1px solid darkgreen;
+  border: 1px solid rgba(5, 94, 5, .3);
   border-radius: 10px;
 
-  background: linear-gradient(35deg, #fff, rgb(224, 224, 224));
+  background: linear-gradient(35deg, rgb(133, 177, 119), rgb(83, 131, 86));
   box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, .1),
               1px 1px 2px 0 rgba(0, 0, 0, .2);;
 }
 
-.game__card_flipped {
-  background: linear-gradient(35deg, rgb(133, 177, 119), rgb(64, 104, 66));
+.game__card_upside {
+  background: linear-gradient(35deg, #fff, rgb(224, 224, 224));
+}
+
+.game__icon {
+  width: 100%;
+  object-fit: contain;
+  opacity: 0;
+}
+
+.game__card_upside .game__icon {
+  opacity: 1;
 }

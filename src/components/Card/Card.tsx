@@ -12,7 +12,7 @@ const Card: FC<Props> = ({ icon }: Props) => (
     <img
       src={icon.icon}
       alt={icon.value}
-      style={{ maxWidth: '100%', backgroundSize: 'contain' }}
+      className={styles.game__icon}
     />
   </li>
 );
