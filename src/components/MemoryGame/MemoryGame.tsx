@@ -1,16 +1,16 @@
 import { FC, useEffect, useState } from 'react';
-import { Icon } from 'types/gameTypes';
+import { Icon, IconArray } from 'types/gameTypes';
 
 import randomIcons from 'utils/randomIcons';
-import Field from './Field';
+import Field from 'components/Field/Field';
 
 import styles from './MemoryGame.module.css';
 
 const MemoryGame: FC = () => {
-  const [field, setField] = useState<Icon[]>([]);
+  const [field, setField] = useState<IconArray>([]);
 
   useEffect(() => {
-    setField(randomIcons);
+    setField([...randomIcons]);
   }, []);
 
   return (

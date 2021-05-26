@@ -1,0 +1,6 @@
+.game__field {
+  display: grid;
+  grid-template-columns: repeat(6, 70px);
+  grid-template-rows: repeat(6, 70px);
+  gap: 10px;
+}

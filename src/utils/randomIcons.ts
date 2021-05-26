@@ -57,6 +57,11 @@ const iconsArray = [
   {icon: penguin, value: 'penguin'},
 ]
 
+const iconsIdArray = iconsArray.reduce((red: Icon[], el, i) => {
+  red.push({ ...el, id: i, upside: false });
+  return red;
+}, []);
+
 const generateNumbers = (arr: Icon[]): Icon[] => {
   for (let i = arr.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -65,6 +70,6 @@ const generateNumbers = (arr: Icon[]): Icon[] => {
   return arr;
 };
 
-const randomIcons = generateNumbers(iconsArray);
+const randomIcons = generateNumbers(iconsIdArray);
 
 export default randomIcons;
