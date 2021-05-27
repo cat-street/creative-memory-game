@@ -1,0 +1,39 @@
+{
+  "files": {
+    "main.css": "/creative-memory-game/static/css/main.ed179aac.chunk.css",
+    "main.js": "/creative-memory-game/static/js/main.5b34098a.chunk.js",
+    "main.js.map": "/creative-memory-game/static/js/main.5b34098a.chunk.js.map",
+    "runtime-main.js": "/creative-memory-game/static/js/runtime-main.0b79b7cb.js",
+    "runtime-main.js.map": "/creative-memory-game/static/js/runtime-main.0b79b7cb.js.map",
+    "static/js/2.f4a67ba3.chunk.js": "/creative-memory-game/static/js/2.f4a67ba3.chunk.js",
+    "static/js/2.f4a67ba3.chunk.js.map": "/creative-memory-game/static/js/2.f4a67ba3.chunk.js.map",
+    "index.html": "/creative-memory-game/index.html",
+    "static/css/main.ed179aac.chunk.css.map": "/creative-memory-game/static/css/main.ed179aac.chunk.css.map",
+    "static/js/2.f4a67ba3.chunk.js.LICENSE.txt": "/creative-memory-game/static/js/2.f4a67ba3.chunk.js.LICENSE.txt",
+    "static/media/001-elephant.0b7d3dd8.svg": "/creative-memory-game/static/media/001-elephant.0b7d3dd8.svg",
+    "static/media/002-hen.57500f90.svg": "/creative-memory-game/static/media/002-hen.57500f90.svg",
+    "static/media/005-dolphin.ce1eeecc.svg": "/creative-memory-game/static/media/005-dolphin.ce1eeecc.svg",
+    "static/media/006-parrot.a4d1d050.svg": "/creative-memory-game/static/media/006-parrot.a4d1d050.svg",
+    "static/media/007-whale.4c18cd4d.svg": "/creative-memory-game/static/media/007-whale.4c18cd4d.svg",
+    "static/media/008-snake.e8710bd7.svg": "/creative-memory-game/static/media/008-snake.e8710bd7.svg",
+    "static/media/015-monkey.850a5e67.svg": "/creative-memory-game/static/media/015-monkey.850a5e67.svg",
+    "static/media/016-fish.36db08c1.svg": "/creative-memory-game/static/media/016-fish.36db08c1.svg",
+    "static/media/020-rabbit.1e947366.svg": "/creative-memory-game/static/media/020-rabbit.1e947366.svg",
+    "static/media/022-pig.65e0004f.svg": "/creative-memory-game/static/media/022-pig.65e0004f.svg",
+    "static/media/023-octopus.2b852733.svg": "/creative-memory-game/static/media/023-octopus.2b852733.svg",
+    "static/media/031-turtle.b69e3b05.svg": "/creative-memory-game/static/media/031-turtle.b69e3b05.svg",
+    "static/media/033-cat.bc264830.svg": "/creative-memory-game/static/media/033-cat.bc264830.svg",
+    "static/media/035-owl.3803f268.svg": "/creative-memory-game/static/media/035-owl.3803f268.svg",
+    "static/media/037-dog.171cead6.svg": "/creative-memory-game/static/media/037-dog.171cead6.svg",
+    "static/media/038-sheep.6c69790e.svg": "/creative-memory-game/static/media/038-sheep.6c69790e.svg",
+    "static/media/039-giraffe.f74be851.svg": "/creative-memory-game/static/media/039-giraffe.f74be851.svg",
+    "static/media/045-penguin.5e8eda20.svg": "/creative-memory-game/static/media/045-penguin.5e8eda20.svg",
+    "static/media/index.css": "/creative-memory-game/static/media/HelveticaNeueCyr-Roman.0247694e.woff"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0b79b7cb.js",
+    "static/js/2.f4a67ba3.chunk.js",
+    "static/css/main.ed179aac.chunk.css",
+    "static/js/main.5b34098a.chunk.js"
+  ]
+}
