@@ -1,13 +1,14 @@
 import Card from 'components/Card/Card';
+import { MutableRefObject } from 'react';
 import { IconArray } from 'types/gameTypes';
 
 import styles from './Field.module.css';
 
 type Props = {
   icons: IconArray;
-  count: number;
+  value: string;
+  counter: MutableRefObject<number>;
   setValue: (value: string) => void;
-  setCount: (ind: number) => void;
 };
 
 const Field = (props: Props) => {

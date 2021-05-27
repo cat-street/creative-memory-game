@@ -6,17 +6,23 @@
 
   background: linear-gradient(35deg, rgb(133, 177, 119), rgb(83, 131, 86));
   box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, .1),
-              1px 1px 2px 0 rgba(0, 0, 0, .2);;
+    1px 1px 2px 0 rgba(0, 0, 0, .2);
+
+  cursor: pointer;
 }
 
 .game__card_upside {
   background: linear-gradient(35deg, #fff, rgb(224, 224, 224));
+  transition: all 100ms linear;
+  pointer-events: none;
 }
 
 .game__icon {
   width: 100%;
   object-fit: contain;
   opacity: 0;
+
+  transition: all 100ms linear;
 }
 
 .game__card_upside .game__icon {

@@ -1,5 +1,5 @@
-import { FC, useEffect, useState } from 'react';
-import { Icon, IconArray } from 'types/gameTypes';
+import { FC, useEffect, useRef, useState } from 'react';
+import { IconArray } from 'types/gameTypes';
 
 import randomIcons from 'utils/randomIcons';
 import Field from 'components/Field/Field';
@@ -9,18 +9,14 @@ import styles from './MemoryGame.module.css';
 const MemoryGame: FC = () => {
   const [field, setField] = useState<IconArray>([]);
   const [turnedValue, setTurnedValue] = useState<string>('');
-  const [turnedCount, setTurnedCount] = useState(0);
+  const counter = useRef(0);
 
   const setValue = (value: string) => {
     if (!turnedValue || value !== turnedValue) {
       setTurnedValue(value);
       return;
     }
-    removeCards(value);
-  }
-
-  const setCount = (ind: number) => {
-    setTurnedCount(ind);
+    setTimeout(() => removeCards(value), 100);
   }
 
   const removeCards = (value: string) => {
@@ -30,14 +26,6 @@ const MemoryGame: FC = () => {
     }, []));
   }
 
-  // const flipCard = (index: number) => {
-  //   const newField = [ ...field ];
-  //   const card = { ...newField[index] } as Icon;
-  //   card.upside = true;
-  //   newField[index] = card;
-  //   setField(newField)
-  // }
-
   useEffect(() => {
     setField([...randomIcons]);
   }, []);
@@ -46,9 +34,9 @@ const MemoryGame: FC = () => {
     <main className={styles.game}>
       <Field
         icons={field}
+        value={turnedValue}
+        counter={counter}
         setValue={setValue}
-        count={turnedCount}
-        setCount={setCount}
       />
 
       <footer className={styles.footer}>
