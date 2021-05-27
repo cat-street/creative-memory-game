@@ -1,5 +1,5 @@
 {
-  "name": "creative-tasks",
+  "name": "creative-memory-game",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -40,5 +40,14 @@
       "last 1 safari version"
     ]
   },
-  "css.lint.unknownAtRules": "ignore"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cat-street/creative-memory-game.git"
+  },
+  "author": "Andrey Kudryavtsev <catlogic@ya.ru>",
+  "license": "ISC",
+  "homepage": "https://cat-street.github.io/creative-memory-game",
+  "devDependencies": {
+    "gh-pages": "^3.2.0"
+  }
 }
