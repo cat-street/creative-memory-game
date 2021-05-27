@@ -5,21 +5,17 @@ import styles from './Card.module.css';
 
 type Props = {
   icon: Icon;
-  index: number;
-  value: string;
   counter: MutableRefObject<number>;
   setValue: (value: string) => void;
 };
 
 const Card: FC<Props> = ({
   icon,
-  index,
-  value,
   counter,
   setValue,
 }: Props) => {
   const [turned, setTurned] = useState(false);
-  let timeout: ReturnType<typeof setTimeout>;
+  let timeout: ReturnType<typeof setTimeout> | null = null;
 
   const handleClick = () => {
     if (counter.current > 1) return;
@@ -37,14 +33,14 @@ const Card: FC<Props> = ({
 
   useEffect(() => {
     if (counter.current > 1) {
-      clearTimeout(timeout);
+      if (timeout) clearTimeout(timeout);
       setTimeout(() => {
         setTurned(false);
         setValue('');
         counter.current = 0;
       }, 200);
     }
-  }, [setTurned, setValue, counter]);
+  }, [setTurned, setValue, counter, timeout]);
 
   return (
     <li

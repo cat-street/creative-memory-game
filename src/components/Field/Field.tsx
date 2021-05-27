@@ -6,7 +6,6 @@ import styles from './Field.module.css';
 
 type Props = {
   icons: IconArray;
-  value: string;
   counter: MutableRefObject<number>;
   setValue: (value: string) => void;
 };
@@ -17,7 +16,7 @@ const Field = (props: Props) => {
     <ul className={styles.game__field}>
       {props.icons.map((el, i) =>
         el ? (
-          <Card key={el.id} icon={el} index={i} {...cardProps} />
+          <Card key={el.id} icon={el} {...cardProps} />
         ) : (
           <div key={i} />
         ),

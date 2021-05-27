@@ -34,7 +34,6 @@ const MemoryGame: FC = () => {
     <main className={styles.game}>
       <Field
         icons={field}
-        value={turnedValue}
         counter={counter}
         setValue={setValue}
       />
