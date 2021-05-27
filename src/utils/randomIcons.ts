@@ -58,7 +58,7 @@ const iconsArray = [
 ]
 
 const iconsIdArray = iconsArray.reduce((red: Icon[], el, i) => {
-  red.push({ ...el, id: i, upside: false });
+  red.push({ ...el, id: `0${i}`, upside: false });
   return red;
 }, []);
 

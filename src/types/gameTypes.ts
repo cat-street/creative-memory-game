@@ -1,8 +1,8 @@
 export type Icon = {
-  id: number,
+  id: string,
   icon: string,
   value: string,
-  upside: false,
+  upside: boolean,
 }
 
 export type IconArray = Array<Icon | null>;
