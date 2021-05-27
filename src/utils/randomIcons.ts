@@ -70,6 +70,4 @@ const generateNumbers = (arr: Icon[]): Icon[] => {
   return arr;
 };
 
-const randomIcons = generateNumbers(iconsIdArray);
-
-export default randomIcons;
+export { iconsIdArray, generateNumbers };

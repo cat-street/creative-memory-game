@@ -1,7 +1,7 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { IconArray } from 'types/gameTypes';
 
-import randomIcons from 'utils/randomIcons';
+import { iconsIdArray, generateNumbers } from 'utils/randomIcons';
 import Field from 'components/Field/Field';
 
 import styles from './MemoryGame.module.css';
@@ -20,7 +20,7 @@ const MemoryGame = () => {
   const counter = useRef(0);
 
   const runGame = () => {
-    setField([...randomIcons]);
+    setField(generateNumbers(iconsIdArray));
     setRunning(true);
     gameInterval = setInterval(() => {
       setTimer((prevTimer) => prevTimer + 1);
@@ -54,11 +54,11 @@ const MemoryGame = () => {
   }, [timer]);
 
   useEffect(() => {
-    setField([...randomIcons]);
+    setField(generateNumbers(iconsIdArray));
   }, []);
 
   useEffect(() => {
-    if (guessedCards === field.length) {
+    if (field.length > 0 && guessedCards === field.length) {
       endGame();
     }
   }, [guessedCards, field.length, endGame]);

@@ -16,14 +16,16 @@ const Controls = ({ running, timer, leaderBoard, onStart }: Props) => (
       onClick={onStart}
       disabled={running}
     >
-      Start!
+      START
     </button>
     <Timer timer={timer} />
     <div className={styles.controls__leaderboard}>
       <h2 className={styles['controls__leaderboard-title']}>Leaderboard:</h2>
-      <ul className={styles['controls__leaderboard-board']}>
-        {leaderBoard.map((el) => (
-          <li>SuperPlayer - {el}</li>
+      <ul>
+        {leaderBoard.map((el, i) => (
+          <li className={styles['controls__leaderboard-item']} key={i}>
+            SuperPlayer - {el}
+          </li>
         ))}
       </ul>
     </div>
