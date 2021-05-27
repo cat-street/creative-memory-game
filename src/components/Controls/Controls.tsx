@@ -1,17 +1,25 @@
+import Timer from 'components/Timer/Timer';
 import styles from './Controls.module.css';
 
-type Props = {};
+type Props = {
+  running: boolean;
+  timer: number;
+  onStart: () => void;
+};
 
-const Controls = ({}: Props) => (
+const Controls = ({ running, timer, onStart }: Props) => (
   <aside className={styles.controls}>
-    <button type="button" className={styles.controls__button}>
+    <button
+      type="button"
+      className={styles.controls__button}
+      onClick={onStart}
+      disabled={running}
+    >
       Start!
     </button>
-    <p className={styles.controls__timer}>00:00:00</p>
+    <Timer timer={timer} />
     <div className={styles.controls__leaderboard}>
-      <h2 className={styles['controls__leaderboard-title']}>
-        Leaderboard:
-      </h2>
+      <h2 className={styles['controls__leaderboard-title']}>Leaderboard:</h2>
       <div className={styles['controls__leaderboard-board']} />
     </div>
   </aside>

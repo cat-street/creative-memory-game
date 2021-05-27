@@ -3,22 +3,25 @@ import { MutableRefObject, useEffect, useState } from 'react';
 import { Icon } from 'types/gameTypes';
 import styles from './Card.module.css';
 
+let timeout: ReturnType<typeof setTimeout>;
+
 type Props = {
   icon: Icon;
+  running: boolean;
   counter: MutableRefObject<number>;
   setValue: (value: string) => void;
 };
 
 const Card = ({
   icon,
+  running,
   counter,
   setValue,
 }: Props) => {
   const [turned, setTurned] = useState(false);
-  let timeout: ReturnType<typeof setTimeout> | null = null;
 
   const handleClick = () => {
-    if (counter.current > 1) return;
+    if (!running || counter.current > 1) return;
     setTurned(true);
     counter.current++;
     if (counter.current === 0) {
@@ -40,7 +43,7 @@ const Card = ({
         counter.current = 0;
       }, 200);
     }
-  }, [setTurned, setValue, counter, timeout]);
+  }, [setTurned, setValue, counter]);
 
   return (
     <li

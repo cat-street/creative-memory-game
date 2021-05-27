@@ -6,6 +6,7 @@ import styles from './Field.module.css';
 
 type Props = {
   icons: IconArray;
+  running: boolean;
   counter: MutableRefObject<number>;
   setValue: (value: string) => void;
 };
