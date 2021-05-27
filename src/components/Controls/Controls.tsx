@@ -4,10 +4,11 @@ import styles from './Controls.module.css';
 type Props = {
   running: boolean;
   timer: number;
+  leaderBoard: string[];
   onStart: () => void;
 };
 
-const Controls = ({ running, timer, onStart }: Props) => (
+const Controls = ({ running, timer, leaderBoard, onStart }: Props) => (
   <aside className={styles.controls}>
     <button
       type="button"
@@ -20,7 +21,11 @@ const Controls = ({ running, timer, onStart }: Props) => (
     <Timer timer={timer} />
     <div className={styles.controls__leaderboard}>
       <h2 className={styles['controls__leaderboard-title']}>Leaderboard:</h2>
-      <div className={styles['controls__leaderboard-board']} />
+      <ul className={styles['controls__leaderboard-board']}>
+        {leaderBoard.map((el) => (
+          <li>SuperPlayer - {el}</li>
+        ))}
+      </ul>
     </div>
   </aside>
 );

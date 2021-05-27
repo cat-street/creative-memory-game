@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { IconArray } from 'types/gameTypes';
 
 import randomIcons from 'utils/randomIcons';
@@ -6,6 +6,7 @@ import Field from 'components/Field/Field';
 
 import styles from './MemoryGame.module.css';
 import Controls from 'components/Controls/Controls';
+import formatTime from 'utils/formatTime';
 
 let gameInterval: ReturnType<typeof setInterval>;
 
@@ -13,11 +14,13 @@ const MemoryGame = () => {
   const [field, setField] = useState<IconArray>([]);
   const [running, setRunning] = useState(false);
   const [timer, setTimer] = useState(0);
-  const [guessedCards, setGuessedCards] = useState(34);
+  const [guessedCards, setGuessedCards] = useState(0);
   const [turnedValue, setTurnedValue] = useState<string>('');
+  const [leaderBoard, setLeaderBoard] = useState<string[]>([]);
   const counter = useRef(0);
 
   const runGame = () => {
+    setField([...randomIcons]);
     setRunning(true);
     gameInterval = setInterval(() => {
       setTimer((prevTimer) => prevTimer + 1);
@@ -42,19 +45,23 @@ const MemoryGame = () => {
     );
   };
 
+  const endGame = useCallback(() => {
+    clearInterval(gameInterval);
+    setRunning(false);
+    setLeaderBoard((prevValue) => [...prevValue, formatTime(timer)]);
+    setTimer(0);
+    setGuessedCards(0);
+  }, [timer]);
+
   useEffect(() => {
     setField([...randomIcons]);
   }, []);
 
   useEffect(() => {
     if (guessedCards === field.length) {
-      if (gameInterval) {
-        console.log('here');
-        clearInterval(gameInterval);
-      }
-      setRunning(false);
+      endGame();
     }
-  }, [guessedCards, field.length]);
+  }, [guessedCards, field.length, endGame]);
 
   return (
     <main className={styles.game}>
@@ -68,6 +75,7 @@ const MemoryGame = () => {
         running={running}
         onStart={runGame}
         timer={timer}
+        leaderBoard={leaderBoard}
       />
     </main>
   );
