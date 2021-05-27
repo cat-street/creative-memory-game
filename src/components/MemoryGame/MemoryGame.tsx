@@ -5,6 +5,7 @@ import randomIcons from 'utils/randomIcons';
 import Field from 'components/Field/Field';
 
 import styles from './MemoryGame.module.css';
+import Controls from 'components/Controls/Controls';
 
 const MemoryGame = () => {
   const [field, setField] = useState<IconArray>([]);
@@ -37,6 +38,7 @@ const MemoryGame = () => {
         counter={counter}
         setValue={setValue}
       />
+      <Controls />
     </main>
   );
 };
