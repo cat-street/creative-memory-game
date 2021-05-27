@@ -1,8 +1,15 @@
+import Footer from 'components/Footer/Footer';
 import MemoryGame from 'components/MemoryGame/MemoryGame';
-import { ReactElement } from 'react';
 
-function App(): ReactElement {
-  return <MemoryGame />;
+import styles from './App.module.css';
+
+function App() {
+  return (
+    <div className={styles.app}>
+      <MemoryGame />
+      <Footer />
+    </div>
+  );
 }
 
 export default App;

@@ -1,4 +1,4 @@
-import { FC, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { IconArray } from 'types/gameTypes';
 
 import randomIcons from 'utils/randomIcons';
@@ -6,7 +6,7 @@ import Field from 'components/Field/Field';
 
 import styles from './MemoryGame.module.css';
 
-const MemoryGame: FC = () => {
+const MemoryGame = () => {
   const [field, setField] = useState<IconArray>([]);
   const [turnedValue, setTurnedValue] = useState<string>('');
   const counter = useRef(0);
@@ -37,19 +37,6 @@ const MemoryGame: FC = () => {
         counter={counter}
         setValue={setValue}
       />
-
-      <footer className={styles.footer}>
-        <div>
-          Icons made by{' '}
-          <a href="https://www.freepik.com" title="Freepik">
-            Freepik
-          </a>{' '}
-          from{' '}
-          <a href="https://www.flaticon.com/" title="Flaticon">
-            www.flaticon.com
-          </a>
-        </div>
-      </footer>
     </main>
   );
 };

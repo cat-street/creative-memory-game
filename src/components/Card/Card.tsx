@@ -1,4 +1,4 @@
-import { FC, MutableRefObject, useEffect, useState } from 'react';
+import { MutableRefObject, useEffect, useState } from 'react';
 
 import { Icon } from 'types/gameTypes';
 import styles from './Card.module.css';
@@ -9,7 +9,7 @@ type Props = {
   setValue: (value: string) => void;
 };
 
-const Card: FC<Props> = ({
+const Card = ({
   icon,
   counter,
   setValue,
