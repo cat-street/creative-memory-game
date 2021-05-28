@@ -1,5 +1,5 @@
 import Timer from 'components/Timer/Timer';
-import styles from './Controls.module.css';
+import styles from './Controls.module.scss';
 
 type Props = {
   running: boolean;

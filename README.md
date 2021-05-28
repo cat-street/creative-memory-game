@@ -32,7 +32,7 @@ npm start
 * React (functional components, hooks, useState, useRef, useEffect)
 * TypeScript
 * JavaScript (ES6)
-* CSS Modules
+* SCSS Modules
 
 ## Possible improvements
 * Difficulty option

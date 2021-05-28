@@ -1,7 +1,7 @@
 import { MutableRefObject, useEffect, useState } from 'react';
 
 import { Icon } from 'types/gameTypes';
-import styles from './Card.module.css';
+import styles from './Card.module.scss';
 
 let timeout: ReturnType<typeof setTimeout>;
 

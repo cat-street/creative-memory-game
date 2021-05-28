@@ -1,12 +1,13 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { IconArray } from 'types/gameTypes';
 
-import { iconsIdArray, generateNumbers } from 'utils/randomIcons';
 import Field from 'components/Field/Field';
-
-import styles from './MemoryGame.module.css';
 import Controls from 'components/Controls/Controls';
+
+import { iconsIdArray, generateNumbers } from 'utils/randomIcons';
 import formatTime from 'utils/formatTime';
+
+import styles from './MemoryGame.module.scss';
 
 let gameInterval: ReturnType<typeof setInterval>;
 

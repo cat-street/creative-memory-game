@@ -2,7 +2,7 @@ import Card from 'components/Card/Card';
 import { MutableRefObject } from 'react';
 import { IconArray } from 'types/gameTypes';
 
-import styles from './Field.module.css';
+import styles from './Field.module.scss';
 
 type Props = {
   icons: IconArray;

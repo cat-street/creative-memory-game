@@ -1,5 +1,5 @@
 import formatTime from 'utils/formatTime';
-import styles from './Timer.module.css';
+import styles from './Timer.module.scss';
 
 type Props = {
   timer: number;
