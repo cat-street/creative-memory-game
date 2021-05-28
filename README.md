@@ -35,5 +35,4 @@ npm start
 * CSS Modules
 
 ## Possible improvements
-* Cards flip animation
 * Difficulty option

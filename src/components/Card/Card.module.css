@@ -1,30 +1,47 @@
-.game__card {
+.card {
+  perspective: 140px;
+}
+
+.card__inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 400ms;
+  transform-style: preserve-3d;
+
+  cursor: pointer;
+}
+
+.card__inner_turned {
+  transform: rotateY(180deg);
+}
+
+.card__back, .card__front {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+
   padding: 10px;
 
   border: 1px solid rgba(5, 94, 5, .3);
   border-radius: 10px;
 
-  background: linear-gradient(35deg, rgb(133, 177, 119), rgb(83, 131, 86));
   box-shadow: 2px 2px 6px 0 rgba(0, 0, 0, .1),
     1px 1px 2px 0 rgba(0, 0, 0, .2);
-
-  cursor: pointer;
 }
 
-.game__card_upside {
+.card__back {
+  background: linear-gradient(35deg, rgb(133, 177, 119), rgb(83, 131, 86));
+}
+
+.card__front {
   background: linear-gradient(35deg, #fff, rgb(224, 224, 224));
-  transition: all 150ms linear;
+  transform: rotateY(180deg);
   pointer-events: none;
 }
 
-.game__icon {
+.card__icon {
   width: 100%;
   object-fit: contain;
-  opacity: 0;
-
-  transition: all 100ms linear;
-}
-
-.game__card_upside .game__icon {
-  opacity: 1;
 }

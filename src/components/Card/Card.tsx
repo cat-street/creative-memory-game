@@ -21,7 +21,7 @@ const Card = ({
   const [turned, setTurned] = useState(false);
 
   const handleClick = () => {
-    if (!running || counter.current > 1) return;
+    if (!running || counter.current > 1 || turned) return;
     setTurned(true);
     counter.current++;
     if (counter.current === 0) {
@@ -41,18 +41,23 @@ const Card = ({
         setTurned(false);
         setValue('');
         counter.current = 0;
-      }, 200);
+      }, 400);
     }
   }, [setTurned, setValue, counter]);
 
   return (
-    <li
-      className={`${styles.game__card} ${
-        turned ? styles.game__card_upside : null
-      }`}
-      onClick={handleClick}
-    >
-      <img src={icon.icon} alt={icon.value} className={styles.game__icon} />
+    <li className={styles.card}>
+      <div
+        className={`${styles.card__inner} ${
+          turned ? styles.card__inner_turned : null
+        }`}
+        onClick={handleClick}
+      >
+        <div className={styles.card__front}>
+          <img src={icon.icon} alt={icon.value} className={styles.card__icon} />
+        </div>
+        <div className={styles.card__back} />
+      </div>
     </li>
   );
 };
