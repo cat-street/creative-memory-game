@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/creative-memory-game/static/css/main.ed179aac.chunk.css",
-    "main.js": "/creative-memory-game/static/js/main.5b34098a.chunk.js",
-    "main.js.map": "/creative-memory-game/static/js/main.5b34098a.chunk.js.map",
+    "main.css": "/creative-memory-game/static/css/main.d741d2d6.chunk.css",
+    "main.js": "/creative-memory-game/static/js/main.cb2a8d36.chunk.js",
+    "main.js.map": "/creative-memory-game/static/js/main.cb2a8d36.chunk.js.map",
     "runtime-main.js": "/creative-memory-game/static/js/runtime-main.0b79b7cb.js",
     "runtime-main.js.map": "/creative-memory-game/static/js/runtime-main.0b79b7cb.js.map",
-    "static/js/2.f4a67ba3.chunk.js": "/creative-memory-game/static/js/2.f4a67ba3.chunk.js",
-    "static/js/2.f4a67ba3.chunk.js.map": "/creative-memory-game/static/js/2.f4a67ba3.chunk.js.map",
+    "static/js/2.025adec3.chunk.js": "/creative-memory-game/static/js/2.025adec3.chunk.js",
+    "static/js/2.025adec3.chunk.js.map": "/creative-memory-game/static/js/2.025adec3.chunk.js.map",
     "index.html": "/creative-memory-game/index.html",
-    "static/css/main.ed179aac.chunk.css.map": "/creative-memory-game/static/css/main.ed179aac.chunk.css.map",
-    "static/js/2.f4a67ba3.chunk.js.LICENSE.txt": "/creative-memory-game/static/js/2.f4a67ba3.chunk.js.LICENSE.txt",
+    "static/css/main.d741d2d6.chunk.css.map": "/creative-memory-game/static/css/main.d741d2d6.chunk.css.map",
+    "static/js/2.025adec3.chunk.js.LICENSE.txt": "/creative-memory-game/static/js/2.025adec3.chunk.js.LICENSE.txt",
     "static/media/001-elephant.0b7d3dd8.svg": "/creative-memory-game/static/media/001-elephant.0b7d3dd8.svg",
     "static/media/002-hen.57500f90.svg": "/creative-memory-game/static/media/002-hen.57500f90.svg",
     "static/media/005-dolphin.ce1eeecc.svg": "/creative-memory-game/static/media/005-dolphin.ce1eeecc.svg",
@@ -32,8 +32,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.0b79b7cb.js",
-    "static/js/2.f4a67ba3.chunk.js",
-    "static/css/main.ed179aac.chunk.css",
-    "static/js/main.5b34098a.chunk.js"
+    "static/js/2.025adec3.chunk.js",
+    "static/css/main.d741d2d6.chunk.css",
+    "static/js/main.cb2a8d36.chunk.js"
   ]
 }
